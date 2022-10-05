@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { AppRoutingModule } from './../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,7 @@ import { SeidorApiService } from '../services/seidor-api.service';
     ComponentsModule,
     AppRoutingModule,
     HttpClientModule,
+    TranslateModule
   ],
   providers: [
     SeidorApiService

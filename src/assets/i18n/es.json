@@ -1,0 +1,37 @@
+{
+    "header": {
+        "categories": "Categorías",
+        "categories1": "Categoría 1",
+        "categories2": "Categoría 2",
+        "categories3": "Categoría 3",
+        "brands": "Marcas",
+        "brand1": "Marca 1",
+        "brand2": "Marca 2",
+        "brand3": "Marca 3",
+        "aboutUs": "Nosotros",
+        "help": "AYUDA",
+        "signIn": "IDENTIFICATE"
+    },
+    "footer": {
+        "company": "2022 Mi Empresa"
+    },
+    "dashboard": {
+        "title": "Mis Datos",
+        "h2": "Por favor introduzca sus datos y pulse en continuar",
+        "h3": "Tarjeta de Crédito",
+        "btn": "Continuar",
+        "name": "Nombre *",
+        "lastName": "Apellidos *"
+    },
+    "checkoutPayment": {
+        "title": "Pago",
+        "h2": "Despues de realizar el pago recibirá una confirmacion a tu e-mail con los detalles de  su compra",
+        "p":"Será redirigido a una plataforma de pago seguro. Esto es un proceso seguro. La validación del pago puede demorarse hasta 24 horas.",
+        "btn": "Pagar",
+        "btn2": "Atrás"
+    },
+    "checkoutPaid": {
+        "title": "Pedido realizado",
+        "message": "Felicidades, su pago se ha realizado correctamente. En breve le llegará un correo de confirmación"
+    }
+}

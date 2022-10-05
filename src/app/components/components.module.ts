@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './../app-routing.module';
 import { FooterComponent } from './footer/footer.component';
@@ -20,7 +21,8 @@ import { StepsComponent } from './steps/steps.component';
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
   ],
   exports: [
     HeaderComponent,

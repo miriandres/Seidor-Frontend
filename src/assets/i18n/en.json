@@ -1,0 +1,37 @@
+{
+    "header": {
+        "categories": "Categories",
+        "categories1": "Category 1",
+        "categories2": "Category 2",
+        "categories3": "Category 3",
+        "brands": "Brands",
+        "brand1": "Brand 1",
+        "brand2": "Brand 2",
+        "brand3": "Brand 3",
+        "aboutUs": "About Us",
+        "help": "HELP",
+        "signIn": "SIGN IN"
+    },
+    "footer": {
+        "company": "2022 My Company"
+    },
+    "dashboard": {
+        "title": "My Data",
+        "h2": "Please enter your personal data and press continue",
+        "h3": "Credit Card",
+        "btn": "Continue",
+        "name": "Name *",
+        "lastName": "Last Name *"
+    },
+    "checkoutPayment": {
+        "title": "Payment",
+        "h2": "After making the payment you will receive a confirmation email with details of your purchase",
+        "p":"You will be redirected to a secure payment platform. This is a secure process. The validation of your payment can take up to 24 hours.",
+        "btn": "Pay",
+        "btn2": "Back"
+    },
+    "checkoutPaid": {
+        "title": "Order Created",
+        "message": "Congratulations, your payment was successful. Shortly a confirmation email will arrive to your inbox"
+    }
+}
