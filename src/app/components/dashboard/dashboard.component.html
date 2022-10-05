@@ -1,0 +1,63 @@
+<main class="main">
+    <div class="wrapper">
+        <div class="checkout__header">
+            <h1 class="checkout__h1">{{ title }}</h1>
+            <img class="checkout__svg" [src]=" '/assets/img/' + img " alt="Diploma logo" *ngIf="page === 'Order Confirmation'">
+            <h2 class="checkout__h2">{{ message }}</h2>
+        </div>
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" *ngIf="page === 'My Data'">
+            <div class="form__control">
+                <label for="name">Name *</label>
+                <input class="form__input" type="text" id="name" name="name" formControlName="name" maxlength="30">
+                <div></div>
+                <small class="form__error">Error Message</small>
+            </div>
+            <div class="form__control">
+                <label for="lastName">Last Name *</label>
+                <input class="form__input" type="text" id="lastName" name="lastName" formControlName="lastName" maxlength="60">
+                <div></div>
+                <small class="form__error">Error Message</small>
+                <button 
+                    class="form__btn btn" 
+                    type="submit" >
+                    <span>Continue</span>
+                    <svg class="btn__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+        <div class="checkout">
+            <div class="checkout__details" *ngIf="page === 'Payment'">
+                <img class="checkout__img" src="/assets/img/credit-card.svg" width="75" height="75" alt="Credit card logo">
+                <h3 class="checkout__h3">Credit Card</h3>
+                <p class="checkout__p">You will be redirected to a secure payment platform. This is a secure process. The validation of your payment can take up to 24 hours.</p>
+                <div class="checkout__cards">
+                    <img class="checkout__img" width="75" height="75" src="/assets/img/master-card.png" alt="Master card logo">
+                    <img class="checkout__img" width="75" height="75" src="/assets/img/visa.png" alt="Visa card logo">
+                </div>
+            </div>
+            <div class="checkout__btns" *ngIf="page === 'Payment'">
+                <button 
+                    class="checkout__btn checkout__btn--back btn" 
+                    type="button"
+                    (click)="goBack()">
+                    <svg class="btn__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                    </svg>
+                    <span>Back</span>
+                </button>
+                <button 
+                    class="checkout__btn btn" 
+                    type="button"
+                    (click)="pay()">
+                    <span>Pay</span>
+                    <svg class="btn__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>

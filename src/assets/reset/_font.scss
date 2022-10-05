@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Raleway Medium'), url('/assets/fonts/Raleway-Medium.woff') format('woff');
+}    
+    
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Raleway Extralight'), url('/assets/fonts/Raleway-Extralight.woff') format('woff');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Raleway Semibold'), url('/assets/fonts/Raleway-Semibold.woff') format('woff');
+}  

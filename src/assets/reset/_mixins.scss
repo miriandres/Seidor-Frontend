@@ -1,0 +1,38 @@
+@mixin flex( $a, $b, $c, $d ){
+	display			: flex;
+	flex-flow		: $a $b;
+	justify-content	: $c;
+	@if $b == 'nowrap' {
+		align-items		: $d;	
+	}@else{
+		align-content	: $d;
+	}	
+}
+@mixin grid( $repetirC , $grosorC , $gap , $repetirR : initial, $grosorR : initial ){
+	display					: grid;
+	grid-template-columns	: repeat( $repetirC , $grosorC );
+	@if $repetirR != 'initial' {
+		grid-template-rows	: repeat( $repetirR , $grosorR );
+	}
+	gap: $gap;
+}
+
+// Media queries
+$breakpoints: (
+	xs:  320px,  
+	s:   590px,  
+	m:   768px,  
+	l:   960px,	
+	xl:  1024px, 
+	xxl: 1440px,
+);
+
+@mixin media( $size ) {
+	@each $device, $sizePx in $breakpoints {
+
+		@if $size == $device {
+			@media screen and(max-width: $sizePx) { @content; }
+		}
+	}
+	@media screen and(max-width: $size) { @content; }
+}

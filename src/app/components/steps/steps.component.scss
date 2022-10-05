@@ -1,0 +1,19 @@
+@import '_mixins', '_keyframes';
+.steps{
+    margin: 2.5em 0;
+    animation: fadeInUp 1s ease 1 0.8s both;
+    @include flex( row, nowrap, center, center );
+
+    &__col{
+        width: calc(50% / 2);
+        margin: 0 1em;
+        @include flex( column, nowrap, center, center );
+    }
+    &__status{
+        width: 3.5em;
+        height: 3.5em;
+    }
+    &__span{
+        margin-top: 1em;
+    }
+}

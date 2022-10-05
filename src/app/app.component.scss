@@ -1,0 +1,9 @@
+@import '_mixins';
+
+.router-outlet {
+    position: relative;
+    min-height: 85vh;
+    margin: 0 auto;
+    overflow: hidden;
+    animation: fadeInUp 1s ease 1 0.8s both;
+}

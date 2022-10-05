@@ -1,0 +1,17 @@
+@import '_font', '_variables', '_reset', '_mixins';
+
+.wrapper{
+  width: 70%;
+  max-width: 1200px;
+  min-height: 590px;
+  margin: auto;
+  padding: 4em 1em;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 3px 3px 3px 0px var(--c-shadow);
+  @include flex( column, nowrap, space-between, center );
+
+  @include media(s){
+    width: 90%;
+  }
+}

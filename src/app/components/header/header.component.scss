@@ -1,0 +1,176 @@
+@import '_mixins';
+
+.header{
+    width: 100%;
+    padding: 2em 6em;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    font-weight: 700;
+    @include flex( row, nowrap, space-between, center );
+
+    @include media(xl){
+        padding: 2em 4em;
+    }
+    @include media(m){
+        padding: 1em;
+    }
+
+    &__left{
+        @include flex( row, nowrap, center, center );
+    }
+    &__img{
+        max-width: 4em;
+        height: 4em;
+        margin-right: 1em;
+        transform: scale(1);
+        transition: transform 0.5s ease;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        @include media(m){
+            max-width: 3em;
+            margin-right: 0;
+        }
+    }
+    &__btn{
+        display: none;
+        z-index: 2;
+        cursor: pointer;
+
+        @include media(l){
+            display: flex;
+            max-width: 4em;
+        }
+        &.active .line--1{
+            transform-origin: 1em 2.5em;
+            transform: rotate(45deg);
+        }
+        &.active .line--2{
+            opacity: 0;
+        }
+        &.active .line--3{
+            transform-origin: 1em 4em;
+            transform: rotate(-45deg);
+        }
+    }
+    &__span{
+        display: none;
+    }
+    &__nav{       
+
+        @include media(l){
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white);
+            transform: translateX(-100%);
+            transition: transform 0.8s ease;
+            pointer-events: none;
+            z-index: 2;
+
+            &.active{
+                transform: translateX(0%);
+                display: flex;
+                pointer-events: auto;
+            }
+            &.active .header__svg{
+                display: none;
+            }
+            &.active .header__li{
+                margin: 0.5em 0em;
+                width: 80%;
+                opacity: 1;
+                animation: fadeInUp 1s ease 1 both;
+
+                @for $i from 1 through 4{
+                    &:nth-of-type(#{$i}){
+                        animation-delay: 0.4s + ($i * .1s);
+                    }
+                }
+            }
+            &.active .header__side{
+                display: flex;
+            }
+        }
+    }
+    &__ul{
+        @include flex( row, nowrap, center, center);
+
+        @include media(l){
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    &__li{
+        position: relative;
+        margin: 0 1em;
+        transition: opacity 0.5s ease 1s;
+
+        &:hover .header__submenu{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__li--nav{
+        @include media(l){
+            opacity: 0;
+        }
+    }
+    &__a{
+        @include flex( row, nowrap, center, center);
+    }
+    &__svg{
+        width: 2.5em;
+        height: 2.5em;
+        color: var(--c-accent);
+
+        &--side{
+            margin-right: 0.5em;
+        }
+    }
+    &__submenu{
+        position: absolute;
+        width: 100%;
+        padding: 0.2em 1em;
+        background-color: var(--white);
+        border: 1px solid var(--c-shadow);
+        box-shadow: 2px 2px 2px 0 var(--c-shadow);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+
+        @include media(m){
+            text-align: center;
+        }
+    }
+    &__subli{
+        margin: 0.5em 0;
+        transition: color 0.5s ease;
+        cursor: pointer;
+
+        &:hover{
+            color: var(--c-accent);
+        }
+    }
+    &__side{
+        font-weight: 500;
+        @include flex( row, nowrap, center, center );
+
+        @include media(m){
+            display: none;
+        }
+    }
+    &__languages{
+        padding: 0.5em 0em;
+        border: 1px solid var(--c-shadow);
+        box-shadow: 2px 2px 2px 0px var(--c-shadow);
+    }
+    &__select{
+        padding: 0 1em;
+    }
+}

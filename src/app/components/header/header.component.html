@@ -1,0 +1,85 @@
+<header class="header">
+    <div class="header__left">
+        <a [routerLink]=" [ '/']" class="header__logo" title="My Company">
+            <svg class="header__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36.03">
+                <path d="M32.29,34.22A18,18,0,0,1,8.07,7.65a18,18,0,0,0-2,8.25c0,5,5,8.16,9.17,10.17,4.68,2.27,6,3.28,9.21,6.82l.31.35C27.1,35.06,29,35.94,32.29,34.22Z" transform="translate(-2.56 -2.54)" fill="#4057d9"/><path d="M33.61,33a11.52,11.52,0,0,1-1.32,1.26c-3.29,1.72-5.19.84-7.54-1l-.31-.35c-3.18-3.54-4.53-4.55-9.21-6.82-4.15-2-9.17-5.2-9.17-10.17a18,18,0,0,1,2-8.25,14.57,14.57,0,0,1,2.17-1.81,3.31,3.31,0,0,0-.91,2c-.31,2.07,1,4.61,2.2,6.05a17.72,17.72,0,0,0,5.93,5.21l.06,0c2.57,1.59,5.49,2.7,8.18,4.06l.71.36,2.05,1.06a11,11,0,0,1,5.06,5A4.61,4.61,0,0,1,33.61,33Z" transform="translate(-2.56 -2.54)" fill="#598efb"/><path d="M38.56,20.57a17.92,17.92,0,0,1-4.8,12.22c0,.06-.1.11-.15.17a4.61,4.61,0,0,0-.09-3.4,11,11,0,0,0-5.06-5L25.7,23.16C23,21.8,20.09,20.69,17.52,19.1l-.06,0a17.72,17.72,0,0,1-5.93-5.21c-1.16-1.44-2.51-4-2.2-6a3.31,3.31,0,0,1,.91-2c.35-.23.76-.51,1.12-.73a17.38,17.38,0,0,1,3-1.41c.61-.23,1.24-.42,1.87-.59C27.32.17,38.72,9,38.56,20.57Z" transform="translate(-2.56 -2.54)" fill="#6bc7fe"/></svg>   
+            <span class="header__span">My Company</span>
+        </a>
+        <nav class="header__nav" [ngClass]="{'active' : mobile }">
+            <ul class="header__ul">
+                <li class="header__li header__li--nav">
+                    <a href="#" class="header__a" title="Categories">
+                        <span>Categories</span>
+                        <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                        </svg>
+                    </a>
+                    <ul class="header__submenu" aria-labelledby="submenu">
+                        <li class="header__subli"><a href="#" class="header__a" title="Category 1"></a>Category 1</li>
+                        <li class="header__subli"><a href="#" class="header__a" title="Category 2"></a>Category 2</li>
+                        <li class="header__subli"><a href="#" class="header__a" title="Category 3"></a>Category 3</li>
+                    </ul>
+                </li>
+                <li class="header__li header__li--nav">
+                    <a href="#" class="header__a" title="Categories">
+                        <span>Brands</span>
+                        <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                        </svg>
+                    </a>
+                    <ul class="header__submenu">
+                        <li class="header__subli"><a href="#" class="header__a" title="Brand 1"></a>Brand 1</li>
+                        <li class="header__subli"><a href="#" class="header__a" title="Brand 2"></a>Brand 2</li>
+                        <li class="header__subli"><a href="#" class="header__a" title="Brand 3"></a>Brand 3</li>
+                    </ul>
+                </li>
+                <li class="header__li header__li--nav">
+                    <a href="#" class="header__a" title="About Us">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <ul class="header__side">
+        <li class="header__li">
+            <a href="#" class="header__a" title="Help">
+                <svg class="header__svg header__svg--side" viewBox="0 0 37.55 37.66" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(-1.44 -1.28)" d="M20.2,27.26A1.7,1.7,0,1,0,21.9,29,1.7,1.7,0,0,0,20.2,27.26Zm0,2.33a.63.63,0,0,1-.63-.63.64.64,0,0,1,.63-.64.64.64,0,0,1,.64.64A.64.64,0,0,1,20.2,29.59Z"/>
+                    <path transform="translate(-1.44 -1.28)" d="M20.27,1.28A18.83,18.83,0,1,0,39,20.11,18.81,18.81,0,0,0,20.27,1.28Zm-.11,35.27A16.44,16.44,0,1,1,36.67,20.19,16.47,16.47,0,0,1,20.16,36.55Z"/>
+                    <path transform="translate(-1.44 -1.28)" d="M15.94,14.82a7.21,7.21,0,0,1-2-.13c-.3-.07-.16-.5-.12-.77a6.48,6.48,0,1,1,12.79,2,7.34,7.34,0,0,1-2.39,4.7,8.1,8.1,0,0,0-2.93,6.54,4.21,4.21,0,0,0-2.27.39,9.52,9.52,0,0,1,3.13-8.18,5.73,5.73,0,0,0,2.16-4.72,4,4,0,0,0-3.54-3.91,4.12,4.12,0,0,0-4.54,3.07Z"/>
+                    </svg>
+                <span>HELP</span>
+            </a>
+        </li>
+        <li class="header__li">
+            <a href="#" class="header__a" title="Sign In">
+                <svg class="header__svg header__svg--side" viewBox="0 0 37.6 37.63" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(-1.04 -1.44)" d="M17.64,1.56A18.82,18.82,0,1,0,38.39,23.34,18.87,18.87,0,0,0,17.64,1.56Zm6.28,14.8c1.5.45.86,2.08.18,2.54-1.94,1.29-2.48,3.65-2.49,6a2.93,2.93,0,0,0,2.81,2.93,13.5,13.5,0,0,1,7,1.91c1.25.81,1.25.94.22,2a16.34,16.34,0,0,1-12,5A16.63,16.63,0,0,1,7.88,31.56c-.7-.7-.66-1.15.15-1.69a13.46,13.46,0,0,1,7.06-2.05,3.11,3.11,0,0,0,3-3.17,8.42,8.42,0,0,0-2.46-5.73c-.7-.72-.88-2.12.59-2.48a2.19,2.19,0,0,1-.5-1.21,4.46,4.46,0,0,1,3.07-4.51c2.59-.82,5.36,1.57,5.23,4.52Zm9.54,12C31,26.3,28,25.7,24.92,25.46c-1.05-.08-1-.56-.87-1.57a5,5,0,0,1,1.69-3.2,3.63,3.63,0,0,0,.68-4.75c-.42-.69-.09-1.47-.22-2.28A6.72,6.72,0,0,0,20,8.19,6.39,6.39,0,0,0,13.54,14a7.09,7.09,0,0,1-.81,2.69c-.49,1.3.29,2.78,1.42,4.19A4.63,4.63,0,0,1,15,22c1.16,2.85,1.12,3.33-1.38,3.59A14,14,0,0,0,5.73,28.7c-2.85-5.16-3.18-10.37-.65-15.62a16.4,16.4,0,0,1,30.83,3.81,15.75,15.75,0,0,1-1.55,11C34.19,28.22,34.14,28.9,33.46,28.34Z"/>
+                </svg>
+                <span>SIGN IN</span>
+            </a>
+        </li>
+        <div class="header__languages">
+            <select class="header__select" aria-label="Default select">
+                <option value="EN">EN</option>
+                <option value="ES">ES</option>
+            </select>
+        </div>
+    </ul>
+
+    <button 
+        type="button" 
+        (click)=" setMobile() "
+        class="header__btn"
+        [ngClass]="{'active' : mobile }"
+        aria-label="Menu">
+        <svg class="header__svg" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+            <g>
+                <path class="line line--1" d="M6 20h88v9H6z" />
+                <path class="line line--2" d="M6 47h88v9H6z" />
+                <path class="line line--3" d="M6 74h88v9H6z" />
+            </g>
+        </svg>
+    </button>
+</header>

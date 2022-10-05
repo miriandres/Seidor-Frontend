@@ -1,0 +1,19 @@
+@import '_mixins';
+
+.footer{
+    width: 100%;
+    padding: 1em;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    @include flex( row, nowrap, center, center );
+
+    &__copy{
+        width: 100%;
+        @include flex( row, nowrap, center, center );
+    }
+    &__svg{
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: 0.3em;
+    }
+}
