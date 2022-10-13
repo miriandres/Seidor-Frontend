@@ -1,5 +1,8 @@
 # Seidor Frontend task
-![seidor-banner](https://user-images.githubusercontent.com/86624207/194095585-37079439-725e-4c25-be80-bd8f200c2555.png)
+
+<div align="center">
+  <img src="src/assets/design/seidor-banner.png" alt="Banner Seidor" title="Banner Seidor">
+</div>
 
 <div align="center">
   
