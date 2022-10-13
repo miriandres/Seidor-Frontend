@@ -6,6 +6,7 @@
 
     &__control{
         width: 100%;
+        padding: 1em 0;
         font-weight: 600;
         color: var(--c-sec-text);
     }
@@ -16,7 +17,7 @@
         border: 3px solid var(--c-shadow);
     }
     &__error{
-        visibility: hidden;
+        color: var(--c-error);
     }
     &__btn{
         width: 11em;
