@@ -28,7 +28,8 @@ import { StepsComponent } from './steps/steps.component';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    StepsComponent
+    StepsComponent,
+    TranslateModule
   ]
 })
 export class ComponentsModule { }
