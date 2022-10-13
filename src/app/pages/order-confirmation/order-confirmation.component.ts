@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderConfirmationComponent implements OnInit {
 
-  info : any = {
-    title: 'title',
-    message: 'message',
-    img: 'img'
-  };
+  loaded : boolean = false
+  info   : any = {}
 
   constructor(
     private apiService : SeidorApiService,
@@ -25,7 +22,7 @@ export class OrderConfirmationComponent implements OnInit {
   loadData(){
     this.apiService.getData().subscribe( data => {
       this.info = data;
+      this.loaded = true;
     })
   }
-
 }

@@ -1,6 +1,7 @@
 <app-steps></app-steps>
-<app-dashboard
+<app-dashboard 
+    *ngIf=" loaded "
     [page]="'Order Confirmation'"
     [title]=" info['title']['en'] "
     [message]=" info['message']['en'] "
-    [img]="info['img']"></app-dashboard>
+    [img]=" info['img'] "></app-dashboard>
