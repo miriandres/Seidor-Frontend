@@ -5,10 +5,10 @@ import { OrderConfirmationComponent } from './pages/order-confirmation/order-con
 import { PaymentComponent } from './pages/payment/payment.component';
 
 const routes: Routes = [
-  { path : '',                          component : MyDataComponent },
-  { path : 'step-2-payment',            component : PaymentComponent },
-  { path : 'step-3-order-confirmation', component : OrderConfirmationComponent },
-  { path : '**', redirectTo: '', pathMatch: 'full'},
+  { path : 'checkout/step-1-my-data',            component : MyDataComponent },
+  { path : 'checkout/step-2-payment',            component : PaymentComponent },
+  { path : 'checkout/step-3-order-confirmation', component : OrderConfirmationComponent },
+  { path : '**', redirectTo: 'checkout/step-1-my-data', pathMatch: 'full'},
 ];
 
 @NgModule({
