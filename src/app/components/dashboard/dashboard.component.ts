@@ -10,9 +10,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class DashboardComponent implements OnInit {
 
-  @Input() page : string = 'none';
-  @Input() title : string = 'none';
-  @Input() img : string = 'src';
+  @Input() page    : string = 'none';
+  @Input() title   : string = 'none';
+  @Input() img     : string = 'src';
   @Input() message : string = 'none';
 
   loginForm = new FormGroup({
@@ -29,20 +29,20 @@ export class DashboardComponent implements OnInit {
   }
   
   // User validation
-  onSubmit(form: any):void{
+  onSubmit(form: any): void{
     if(form.name == 'John' && form.lastName=='Doe'){
-      this.router.navigate(['/step-2-payment']);
+      this.router.navigate(['checkout/step-2-payment']);
     }
     this.resetForm()
   }
-  resetForm(){
-    this.loginForm.reset()
+  resetForm(): void{
+    this.loginForm.reset();
   }
 
   goBack(): void{
     this.location.back();
   }
   pay(): void{
-    this.router.navigate(['/step-3-order-confirmation']);
+    this.router.navigate(['checkout/step-3-order-confirmation']);
   }
 }
