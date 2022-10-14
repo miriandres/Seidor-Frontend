@@ -1,3 +1,4 @@
+import { Info } from './../../interfaces/info';
 import { SeidorApiService } from './../../services/seidor-api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderConfirmationComponent implements OnInit {
 
-  loaded : boolean = false
+  loaded : boolean = false;
   info   : any = {}
 
   constructor(
@@ -20,7 +21,7 @@ export class OrderConfirmationComponent implements OnInit {
   }
 
   loadData(){
-    this.apiService.getData().subscribe( data => {
+    this.apiService.getData().subscribe((data : Info ) => {
       this.info = data;
       this.loaded = true;
     })
