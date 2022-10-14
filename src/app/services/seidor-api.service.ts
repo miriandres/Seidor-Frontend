@@ -1,5 +1,7 @@
+import { Info } from './../interfaces/info';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,14 @@ export class SeidorApiService {
   ) { }
 
   getData() {
-    return this._http.get(`${this.url}`)
+    return this._http.get<Info>(`${this.url}`)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  handleError(error: any): Promise<any> {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
   }
 }
