@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public isActive : number = -1
   public menu    : Array<MenuLi> = []
   public mobile  : boolean = false
 
@@ -36,6 +37,9 @@ export class HeaderComponent implements OnInit {
     this.translate.use(event.target.value);
   }
 
+  showMenu( x : number ) : void {
+    this.isActive = x
+  }
   setMobile() : void {
     this.mobile = !this.mobile;
   }

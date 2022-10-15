@@ -58,7 +58,7 @@
     &__span{
         display: none;
     }
-    &__nav{       
+    &__nav{
 
         @include media(l){
             position: fixed;
@@ -110,11 +110,6 @@
         position: relative;
         margin: 0 1em;
         transition: opacity 0.5s ease 1s;
-
-        &:hover .header__submenu{
-            opacity: 1;
-            visibility: visible;
-        }
     }
     &__li--nav{
         @include media(l){
@@ -136,23 +131,29 @@
     &__submenu{
         position: absolute;
         width: 100%;
-        padding: 0.2em 1em;
         background-color: var(--white);
         border: 1px solid var(--c-shadow);
         box-shadow: 2px 2px 2px 0 var(--c-shadow);
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
         transition: opacity 0.5s ease;
+        z-index: 2;
 
         @include media(m){
             text-align: center;
         }
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
     }
     &__subli{
-        margin: 0.5em 0;
+        padding: 0.5em 1em;
         transition: color 0.5s ease;
         cursor: pointer;
-
         &:hover{
             color: var(--c-accent);
         }
