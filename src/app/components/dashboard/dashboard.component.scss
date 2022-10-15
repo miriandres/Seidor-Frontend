@@ -1,4 +1,7 @@
 @import '_mixins';
+.main{
+    animation: fadeInUp 1s ease 1 0.8s both;
+}
 .checkout{
     max-width: 535px;
     animation: fadeInUp 1s ease 1 0.9s both;
