@@ -5,29 +5,7 @@
             <img class="checkout__svg" [src]=" '/assets/img/' + img " alt="Diploma logo" *ngIf="page === 'Order Confirmation'">
             <h2 class="checkout__h2">{{ message | translate }}</h2>
         </div>
-        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" *ngIf="page === 'My Data'">
-            <div class="form__control">
-                <label for="name">{{ "dashboard.name" | translate }}
-                    <small class="form__error" *ngIf="nameField?.hasError('required') && nameField?.dirty">Name is required</small>
-                    <input class="form__input" type="text" id="name" name="name" formControlName="name" maxlength="30">
-                </label>
-            </div>
-            <div class="form__control">
-                <label for="lastName">{{ "dashboard.lastName" | translate }}
-                    <small class="form__error" *ngIf="lastNameField.hasError('required') && lastNameField.dirty">Last name is required</small>
-                    <input class="form__input" type="text" id="lastName" name="lastName" formControlName="lastName" maxlength="60">
-                </label>
-                <button 
-                    class="form__btn btn" 
-                    type="submit" >
-                    <span>{{ "dashboard.btn" | translate }}</span>
-                    <svg class="btn__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
-                    </svg>
-                </button>
-            </div>
-        </form>
-
+        <app-form *ngIf="page === 'My Data'"></app-form>
         <div class="checkout">
             <div class="checkout__details" *ngIf="page === 'Payment'">
                 <img class="checkout__img" src="/assets/img/credit-card.svg" width="75" height="75" alt="Credit card logo">
