@@ -1,3 +1,5 @@
+import { AppService } from './../../services/app.service';
+import { MenuLi } from './../../interfaces/menu';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public menu    : Array<MenuLi> = []
   public mobile  : boolean = false
 
-  constructor(private translate: TranslateService) { }
+  constructor(
+    private translate  : TranslateService,
+    private appService : AppService,
+  ) { 
+    this.menu = appService.menu
+  }
 
   lang = '';
   languages = [
