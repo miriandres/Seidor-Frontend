@@ -10,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public isActive : number = -1
-  public menu    : Array<MenuLi> = []
-  public mobile  : boolean = false
+  public currentIndex : number = -1;
+  public menu         : Array<MenuLi> = [];
+  public mobile       : boolean = false;
+  public isOpen       : boolean = false;
+
+  lang : string = '';
+  languages = [
+    { id: 1, label: "en" },
+    { id: 2, label: "es" }
+  ];
 
   constructor(
     private translate  : TranslateService,
@@ -21,15 +28,9 @@ export class HeaderComponent implements OnInit {
     this.menu = appService.menu
   }
 
-  lang = '';
-  languages = [
-    { id: 1, label: "en" },
-    { id: 2, label: "es" }
-  ]
-
   ngOnInit(): void {
     this.lang = this.translate.getDefaultLang();
-    this.translate.use(this.lang)
+    this.translate.use(this.lang);
   }
 
   onChange(event : any){
@@ -38,7 +39,8 @@ export class HeaderComponent implements OnInit {
   }
 
   showMenu( x : number ) : void {
-    this.isActive = x
+    this.currentIndex = x;
+    this.isOpen = !this.isOpen;
   }
   setMobile() : void {
     this.mobile = !this.mobile;

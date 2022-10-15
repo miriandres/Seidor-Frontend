@@ -11,6 +11,7 @@
                 <li 
                     *ngFor="let eachLi of menu, index as i"
                     class="header__li header__li--nav"
+                    (click)="showMenu(i)"
                     (mouseover)="showMenu(i)"
                     (mouseout)="showMenu(-1)">
                         <a href="#" [class]=" eachLi.class " [title]=" eachLi.route | translate ">
@@ -20,9 +21,10 @@
                             </svg>
                         </a>
                         <ul 
-                            [ngClass]="{'active' : isActive === i }" 
+                            [ngClass]="{'active' : currentIndex === i && isOpen }" 
                             class="header__submenu" 
-                            aria-labelledby="submenu">
+                            aria-labelledby="submenu"
+                            [attr.aria-expanded]="currentIndex === i && isOpen">
                             <li 
                                 *ngFor="let info of eachLi.submenu" 
                                 class="header__subli">
