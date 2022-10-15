@@ -1,4 +1,7 @@
 {
+    "app": {
+        "company": "Mi Empresa"
+    },
     "header": {
         "categories": "Categorías",
         "categories1": "Categoría 1",
@@ -30,7 +33,7 @@
         "btn": "Pagar",
         "btn2": "Atrás"
     },
-    "checkoutPaid": {
+    "checkoutConfirmed": {
         "title": "Pedido realizado",
         "message": "Felicidades, su pago se ha realizado correctamente. En breve le llegará un correo de confirmación"
     }

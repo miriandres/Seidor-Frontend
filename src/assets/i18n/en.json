@@ -1,4 +1,7 @@
 {
+    "app": {
+        "company": "My Company"
+    },
     "header": {
         "categories": "Categories",
         "categories1": "Category 1",
@@ -30,7 +33,7 @@
         "btn": "Pay",
         "btn2": "Back"
     },
-    "checkoutPaid": {
+    "checkoutConfirmed": {
         "title": "Order Created",
         "message": "Congratulations, your payment was successful. Shortly a confirmation email will arrive to your inbox"
     }
