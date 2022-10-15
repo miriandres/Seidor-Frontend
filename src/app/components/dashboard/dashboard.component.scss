@@ -1,31 +1,4 @@
 @import '_mixins';
-.form{
-    width: 100%;
-    max-width: 389px;
-    animation: fadeInUp 1.5s ease 1 0.8s both;
-
-    &__control{
-        width: 100%;
-        padding: 1em 0;
-        font-weight: 600;
-        color: var(--c-sec-text);
-    }
-    &__input{
-        width: 100%;
-        padding: 0.5em 0;
-        border-radius: 5px;
-        border: 3px solid var(--c-shadow);
-    }
-    &__error{
-        color: var(--c-error);
-    }
-    &__btn{
-        width: 11em;
-        margin-left: auto;
-        margin-top: 2em;
-        @include flex( row, nowrap, flex-end, center );
-    }
-}
 .checkout{
     max-width: 535px;
     animation: fadeInUp 1s ease 1 0.9s both;
@@ -79,21 +52,5 @@
         &--back{
             justify-content: flex-start;
         }
-    }
-}
-.btn{
-    color: var(--white);
-    background-color: var(--c-btn);
-    border: 2px solid var(--c-border-btn);
-    border-radius: 8px;
-    box-shadow: 10px 10px 5px -2px var(--c-shadow);
-    box-shadow: 3px 3px 3px 0px var(--c-shadow);
-    font-weight: 300;
-    letter-spacing: 1px;
-    cursor: pointer;
-
-    &__svg{
-        width: 2.5em;
-        height: 2.5em;
     }
 }
