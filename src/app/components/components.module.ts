@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StepsComponent } from './steps/steps.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -15,7 +16,8 @@ import { StepsComponent } from './steps/steps.component';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    StepsComponent
+    StepsComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { StepsComponent } from './steps/steps.component';
     FooterComponent,
     DashboardComponent,
     StepsComponent,
+    FormComponent,
     TranslateModule
   ]
 })
