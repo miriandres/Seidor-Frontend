@@ -1,7 +1,8 @@
 import { AppService } from './../../services/app.service';
 import { MenuLi } from './../../interfaces/menu';
 import { TranslateService } from '@ngx-translate/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translate  : TranslateService,
     private appService : AppService,
+    @Inject(DOCUMENT) private document : Document
   ) { 
     this.menu = appService.menu
   }
@@ -44,6 +46,12 @@ export class HeaderComponent implements OnInit {
   }
   setMobile() : void {
     this.mobile = !this.mobile;
+    
+    if(this.mobile == true){
+      this.document.body.classList.add('no-scroll');
+    } else {
+      this.document.body.classList.remove('no-scroll');
+    }
   }
 
 }
