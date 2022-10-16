@@ -1,34 +1,18 @@
 @import '_font', '_variables', '_reset', '_mixins';
 
-.wrapper{
-  width: 70%;
-  max-width: 1200px;
-  min-height: 590px;
-  margin: auto;
-  padding: 4em 1em;
-  background-color: var(--white);
-  border: 2px solid var(--black);
-  box-shadow: 3px 3px 3px 0px var(--c-shadow);
-  @include flex( column, nowrap, space-between, center );
-
-  @include media(s){
-    width: 90%;
-  }
-}
-
 .btn{
-    color: var(--white);
-    background-color: var(--c-btn);
-    border: 2px solid var(--c-border-btn);
-    border-radius: 8px;
-    box-shadow: 10px 10px 5px -2px var(--c-shadow);
-    box-shadow: 3px 3px 3px 0px var(--c-shadow);
-    font-weight: 300;
-    letter-spacing: 1px;
-    cursor: pointer;
+  color: var(--white);
+  background-color: var(--c-btn);
+  border: 2px solid var(--c-border-btn);
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px -2px var(--c-shadow);
+  box-shadow: 3px 3px 3px 0px var(--c-shadow);
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
 
-    &__svg{
-        width: 2.5em;
-        height: 2.5em;
-    }
+  &__svg{
+    width: 2.5em;
+    height: 2.5em;
+  }
 }
