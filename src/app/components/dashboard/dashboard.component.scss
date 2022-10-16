@@ -1,9 +1,20 @@
 @import '_mixins';
 .main{
+    width: 85%;
+    max-width: 1200px;
+    min-height: 500px;
+    margin: auto;
+    padding: 4em 1em;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    box-shadow: 3px 3px 3px 0px var(--c-shadow);
     animation: fadeInUp 1s ease 1 0.8s both;
+
+    .wrapper{
+        @include flex( column, nowrap, flex-start, center );
+    }
 }
 .checkout{
-    max-width: 535px;
     animation: fadeInUp 1s ease 1 0.9s both;
 
     &__header{
@@ -28,8 +39,11 @@
         max-width: 5em;
         margin-bottom: 2em;
     }
-    &__details{
+    &__payment{
+        max-width: 535px;
         margin: 0 auto;
+    }
+    &__details{
         padding: 0.5em 1.5em 1em;
         border: 2px solid var(--c-border);
         text-align: center;
