@@ -24,7 +24,9 @@
         "h3": "Tarjeta de Crédito",
         "btn": "Continuar",
         "name": "Nombre *",
-        "lastName": "Apellidos *"
+        "lastName": "Apellidos *",
+        "imgAlt": "Logo Master card",
+        "imgAlt2": "Logo tarjeta Visa"
     },
     "checkoutPayment": {
         "title": "Pago",
