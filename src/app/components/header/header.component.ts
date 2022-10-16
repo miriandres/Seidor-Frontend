@@ -40,7 +40,10 @@ export class HeaderComponent implements OnInit {
     this.translate.use(event.target.value);
   }
 
-  showMenu( x : number ) : void {
+  showMenu( x : number, $event ?: Event ) : void {
+    if($event){
+      $event.preventDefault();
+    }
     this.currentIndex = x;
     this.isOpen = !this.isOpen;
   }

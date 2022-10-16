@@ -11,20 +11,22 @@
                 <li 
                     *ngFor="let eachLi of menu, index as i"
                     class="header__li header__li--nav"
-                    (click)="showMenu(i)"
+                    (click)="showMenu(i, $event)"
                     (mouseover)="showMenu(i)"
                     (mouseout)="showMenu(-1)">
-                        <a href="#" [class]=" eachLi.class " [title]=" eachLi.route | translate ">
-                            <span>{{ eachLi.route | translate }}</span>
-                            <svg class="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <a href="#" [class]=" eachLi.class " [title]=" eachLi.title | translate ">
+                            <span>{{ eachLi.title | translate }}</span>
+                            <svg *ngIf=" eachLi.submenu " class="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
                             </svg>
                         </a>
                         <ul 
+                            *ngIf=" eachLi.submenu "
                             [ngClass]="{'active' : currentIndex === i && isOpen }" 
                             class="header__submenu" 
                             aria-labelledby="submenu"
                             [attr.aria-expanded]="currentIndex === i && isOpen">
+                            
                             <li 
                                 *ngFor="let info of eachLi.submenu" 
                                 class="header__subli">

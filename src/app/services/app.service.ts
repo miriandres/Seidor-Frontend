@@ -8,8 +8,7 @@ export class AppService {
 
   menu : Array<MenuLi> = [
     {
-      route : 'header.categories',
-      title : 'Check out my portfolio',
+      title : 'header.categories',
       class : 'header__a',
       submenu : [ 
         'header.categories1',
@@ -18,14 +17,17 @@ export class AppService {
       ]
     },
     {
-      route : 'header.brands',
-      title : 'Contact me',
+      title : 'header.brands',
       class : 'header__a',
       submenu : [ 
         'header.brand1',
         'header.brand2',
         'header.brand3',
       ]
+    },
+    {
+      title : 'header.aboutUs',
+      class : 'header__a',
     }
   ]
 

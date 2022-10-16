@@ -100,7 +100,7 @@
         @include media(l){
             width: 100%;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
     }
     &__li{
