@@ -1,11 +1,8 @@
 @import '_mixins';
 .form{
-    width: 100%;
-    max-width: 389px;
     animation: fadeInUp 1.5s ease 1 0.8s both;
 
     &__control{
-        width: 100%;
         padding: 1em 0;
         font-weight: 600;
         color: var(--c-sec-text);
@@ -21,8 +18,8 @@
     }
     &__btn{
         width: 11em;
-        margin-left: auto;
         margin-top: 2em;
+        margin-left: auto;
         @include flex( row, nowrap, flex-end, center );
     }
 }
