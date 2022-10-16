@@ -55,14 +55,14 @@
                 <span>{{ "header.signIn" | translate }}</span>
             </a>
         </li>
-        <div class="header__languages">
+        <li class="header__languages">
             <select class="header__select" aria-label="Default select" (change)="onChange($event)" [(ngModel)]="lang">
                 <option *ngFor="let language of languages" [value]="language.label">{{ language.label | uppercase }}</option>
             </select>
             <svg class="header__svg header__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
             </svg>
-        </div>
+        </li>
     </ul>
 
     <button 
