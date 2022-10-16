@@ -5,8 +5,9 @@
     @include flex( row, nowrap, center, center );
 
     &__col{
-        width: calc(50% / 2);
+        width: 50%;
         margin: 0 1em;
+        max-width: 350px;
         @include flex( column, nowrap, center, center );
     }
     &__status{
