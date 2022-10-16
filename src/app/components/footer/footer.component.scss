@@ -16,4 +16,8 @@
         height: 1.5em;
         margin-right: 0.3em;
     }
+
+    @include media(l){
+        margin-top: 1.5em;
+    }
 }
